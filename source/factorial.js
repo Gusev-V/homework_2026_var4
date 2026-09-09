@@ -2,8 +2,8 @@
 
 /**
  * Вычисляет факториал неотрицательного целого числа
- * @param {number} n - неотрицательное целое число <= 170
- * @returns {number} - факториал числа n
+ * @param {number} num - неотрицательное целое число <= 170
+ * @returns {number} - факториал числа num
  * 
  * @example
  * // returns 120
@@ -17,11 +17,9 @@
 
 const factorial = function(num) {
 
-    // Проверка на отрицательные числа
     if (num < 0) {
         throw new Error('Факториал не определен для отрицательных чисел');   
     }
-    // Проверка на целое число
     if (!Number.isInteger(num)) {
         throw new Error('Факториал не определен для дробных чисел');
     }
@@ -31,11 +29,9 @@ const factorial = function(num) {
         throw new Error('Число слишком большое');
     }
 
-    // Обработка нуля
     if (num === 0)
         return 1;
     
-    // Вычисление
     let result = 1;
     for (let i = 2; i <= num; i++) {
         result *= i;
