@@ -9,12 +9,10 @@
  * // returns 120
  * factorial(5);
  * 
- *  @example
+ * @example
  * // throw Error
- * factorial(-1);
- * 
+ * factorial(-1); 
  */
-
 const factorial = function(num) {
 
     if (num < 0) {
