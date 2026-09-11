@@ -15,8 +15,6 @@
  */
 let factorialCache = [1];
 
-const MAX_CACHE_SIZE = 50;
-
 const factorial = function(num) {
 
     if (num < 0) {
@@ -43,11 +41,6 @@ const factorial = function(num) {
         // Записываем в кэш вычисленное значение
         factorialCache[i] = result;
     }    
-
-    // Сбрасываем кэш перед добавлением нового значения, если достигнут лимит
-    if (factorialCache.length >= MAX_CACHE_SIZE) {
-        factorialCache = [1];
-    }
     
     return result;
 };
