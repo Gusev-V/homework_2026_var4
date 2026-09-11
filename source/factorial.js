@@ -30,7 +30,7 @@ const factorial = function(num) {
     }
 
     // Если такой факториал уже считался берем его
-    if (factorialCache[num] !== undefined ) {
+    if (factorialCache[num]) {
         return factorialCache[num];
     }
 
