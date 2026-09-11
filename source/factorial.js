@@ -19,7 +19,7 @@ const factorial = function(num) {
         throw new Error('Факториал не определен для отрицательных чисел');   
     }
     if (!Number.isInteger(num)) {
-        throw new Error('Факториал определен только для целых чисел');
+        throw new Error(`Факториал не определен для ${num}, тип данных - ${typeof num}`);
     }
     // Проверка на слишком большое число 
     // (из-за 64 битных чисел в JS num > 170 дает ответ Infinity)
