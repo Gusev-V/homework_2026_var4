@@ -1,6 +1,13 @@
 'use strict';
 
 /**
+ * Кэш вычисленных значений факториала
+ * Индекс - число, значение - его факториал
+ * @type {number[]}
+*/
+let factorialCache = [1];
+
+/**
  * Вычисляет факториал неотрицательного целого числа
  * @param {number} num - неотрицательное целое число <= 170
  * @returns {number} - факториал числа num
@@ -13,8 +20,6 @@
  * // throw Error
  * factorial(-1); 
  */
-let factorialCache = [1];
-
 const factorial = function(num) {
 
     if (num < 0) {
